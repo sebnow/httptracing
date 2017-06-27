@@ -6,5 +6,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.0] - 2017-06-27
 ### Added
 - The `Trace` constructor wraps a `http.Client`, tracing all requests.

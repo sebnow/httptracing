@@ -5,7 +5,3 @@
 [[constraint]]
   name = "github.com/opentracing/opentracing-go"
   version = "1.0.2"
-
-[[constraint]]
-  name = "github.com/sebnow/httpclient"
-  version = "1.0.0"

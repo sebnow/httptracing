@@ -1,17 +1,27 @@
 package httptracing
 
 import (
+	"io"
 	"net/http"
 	"net/http/httptest"
+	"net/url"
 	"testing"
 
 	"github.com/opentracing/opentracing-go/mocktracer"
-	"github.com/sebnow/httpclient"
 )
+
+// Client is an interface for the http.Client implementation
+type Client interface {
+	Do(req *http.Request) (*http.Response, error)
+	Get(url string) (resp *http.Response, err error)
+	Head(url string) (resp *http.Response, err error)
+	Post(url string, contentType string, body io.Reader) (resp *http.Response, err error)
+	PostForm(url string, data url.Values) (resp *http.Response, err error)
+}
 
 func TestTracingClientImplementInterface(t *testing.T) {
 	var client interface{} = &TracingClient{}
-	if _, ok := client.(httpclient.Client); !ok {
+	if _, ok := client.(Client); !ok {
 		t.Errorf("TracingClient does not implement the Client interface")
 	}
 }

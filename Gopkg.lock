@@ -10,11 +10,16 @@
   branch = "master"
   name = "github.com/opentracing-contrib/go-stdlib"
   packages = ["nethttp"]
-  revision = "48e4d763b2fbcd10e666e6a1742acdf8cc2286ef"
+  revision = "07a764486eb10927e8cf38337918a40d430524ee"
 
 [[projects]]
   name = "github.com/opentracing/opentracing-go"
-  packages = [".","ext","log","mocktracer"]
+  packages = [
+    ".",
+    "ext",
+    "log",
+    "mocktracer"
+  ]
   revision = "1949ddbfd147afd4d964a9f00b24eb291e0e7c38"
   version = "v1.0.2"
 
@@ -28,7 +33,7 @@
   branch = "master"
   name = "golang.org/x/net"
   packages = ["context"]
-  revision = "5f8847ae0d0e90b6a9dc8148e7ad616874625171"
+  revision = "a680a1efc54dd51c040b3b5ce4939ea3cf2ea0d1"
 
 [solve-meta]
   analyzer-name = "dep"
